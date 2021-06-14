@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Landing Page</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <section>
+        <div class="circle"></div>
+        <header id="header">
+            <a href="#"><img src="./img/logo.png" class="logo" id="header-img"></a>
+            <nav></nav>
+            <ul id="nav-bar">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Menu</a></li>
+                <li><a href="#video" class="nav-link">What's New</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </header>
+        <div class="content">
+            <div class="textbox">
+                <h2>It's not just Coffee <br>It's <span>Starbucks</span></h2>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsum amet dolorem harum ratione, porro repellendus optio! Voluptas magni itaque voluptatem quis, temporibus ab dolorem nobis dolor, veritatis reprehenderit, vel quas?</p>
+                <a href="#">Learn more</a>
+            </div>
+            <div class="imgbox">
+                <img src="./img/img1.png" class="starbucks">
+            </div>
+        </div>
+        <ul class="thumb">
+            <li><img src="./img/thumb1.png" onclick="imgSlider('./img/img1.png'); changeCircleColor('#017143')"></li>
+            <li><img src="./img/thumb2.png" onclick="imgSlider('./img/img2.png'); changeCircleColor('#eb7495')"></li>
+            <li><img src="./img/thumb3.png" onclick="imgSlider('./img/img3.png'); changeCircleColor('#d752b1')"></li>
+        </ul>
+        <ul class="sci">
+            <li><a href="#"><img src="./img/facebook.png"></a></li>
+            <li><a href="#"><img src="./img/twitter.png"></a></li>
+            <li><a href="#"><img src="./img/instagram.png"></a></li>
+        </ul>
+    </section>
+
+    <script type="text/javascript">
+        function imgSlider(anything){
+            document.querySelector('.starbucks').src = anything;
+        } 
+
+        function changeCircleColor(color){
+            const circle = document.querySelector('.circle');
+            circle.style.background = color;
+        }
+    </script>
+    <div class="video" id="video">
+        <h2>What's New</h2>
+        <object data="http://www.youtube.com/embed/W7qWa52k-nE" width="1280" height="720"></object>
+    </div>
+    <section class="contact" id="container">
+        <div id="contact">
+            <h2>Contact Us</h2>
+            <form id="form">
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input 
+                    type="text"
+                    name="name"
+                    id="name"
+                    class="form-control"
+                    placeholder="Your full name"
+                    required
+                    />
+                </div>
+            </form>
+            <form id="form">
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input 
+                    type="text"
+                    name="email"
+                    id="email"
+                    class="form-control"
+                    placeholder="Your favorite email"
+                    required
+                    /> 
+                </div>
+            </form>
+            <div class="form-group">
+                <textarea 
+                id="comments"
+                class="input-textarea" 
+                name="comments"
+                placeholder="Enter your comment here..." 
+                ></textarea>
+            </div>
+            <div class="form-group">
+                <button type="submit" id="submit" class="submit-button"><a href=" https://www.freecodecamp.com/email-submit"> Submit
+                </a></button>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
